@@ -1,11 +1,15 @@
 package addTwoNumbers;
 
 public class main {
-    public static listNode addTwoNumbers(listNode l1, listNode l2) {
+
+    public main() {
+    }
+
+    public listNode addTwoNumbers(listNode l1, listNode l2) {
         return addListNodes(l1, l2, false);
     }
 
-    private static listNode addListNodes(listNode l1, listNode l2, boolean carryOver) {
+    private listNode addListNodes(listNode l1, listNode l2, boolean carryOver) {
         int carry = carryOver ? 1 : 0;
         int added = l1.val + l2.val + carry;
         int val = added > 9 ? added % 10 : added;

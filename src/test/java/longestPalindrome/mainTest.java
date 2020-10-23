@@ -1,10 +1,18 @@
 package longestPalindrome;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class mainTest {
+
+    public main cut;
+
+    @BeforeEach
+    void setup() {
+        cut = new main();
+    }
 
     @Test
     void longestPalindrome1() {
@@ -12,7 +20,7 @@ class mainTest {
 //        Output: "bab"
 //        Note: "aba" is also a valid answer.
         String s = "babad";
-        assertEquals("bab", main.longestPalindrome(s));
+        assertEquals("bab", cut.longestPalindrome(s));
     }
 
     @Test
@@ -20,7 +28,7 @@ class mainTest {
 //        Input: s = "cbbd"
 //        Output: "bb"
         String s = "cbbd";
-        assertEquals("bb", main.longestPalindrome(s));
+        assertEquals("bb", cut.longestPalindrome(s));
     }
 
     @Test
@@ -28,7 +36,7 @@ class mainTest {
 //        Input: s = "a"
 //        Output: "a"
         String s = "a";
-        assertEquals("a", main.longestPalindrome(s));
+        assertEquals("a", cut.longestPalindrome(s));
     }
 
     @Test
@@ -36,7 +44,7 @@ class mainTest {
 //        Input: s = "ac"
 //        Output: "a"
         String s = "ac";
-        assertEquals("a", main.longestPalindrome(s));
+        assertEquals("a", cut.longestPalindrome(s));
     }
 
     @Test
@@ -44,7 +52,7 @@ class mainTest {
 //        Input: s = "bb"
 //        Output: "bb"
         String s = "bb";
-        assertEquals("bb", main.longestPalindrome(s));
+        assertEquals("bb", cut.longestPalindrome(s));
     }
 
     @Test
@@ -52,7 +60,7 @@ class mainTest {
 //        Input: s = "abb"
 //        Output: "bb"
         String s = "abb";
-        assertEquals("bb", main.longestPalindrome(s));
+        assertEquals("bb", cut.longestPalindrome(s));
     }
 
     @Test
@@ -60,7 +68,7 @@ class mainTest {
 //        Input: s = "bba"
 //        Output: "bb"
         String s = "bba";
-        assertEquals("bb", main.longestPalindrome(s));
+        assertEquals("bb", cut.longestPalindrome(s));
     }
 
     @Test
@@ -68,7 +76,7 @@ class mainTest {
 //        Input: s = "ccc"
 //        Output: "ccc"
         String s = "ccc";
-        assertEquals("ccc", main.longestPalindrome(s));
+        assertEquals("ccc", cut.longestPalindrome(s));
     }
 
     @Test
@@ -76,6 +84,6 @@ class mainTest {
 //        Input: s = "aaaa"
 //        Output: "aaaa"
         String s = "aaaa";
-        assertEquals("aaaa", main.longestPalindrome(s));
+        assertEquals("aaaa", cut.longestPalindrome(s));
     }
 }

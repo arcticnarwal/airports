@@ -1,7 +1,11 @@
 package findMedianSortedArrays;
 
 public class main {
-    public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
+
+    public main() {
+    }
+
+    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int i = 0, j = 0, k = 0;
         int combinedLength = nums1.length + nums2.length;
         int dividend = combinedLength / 2;

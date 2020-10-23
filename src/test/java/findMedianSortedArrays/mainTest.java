@@ -1,10 +1,18 @@
 package findMedianSortedArrays;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class mainTest {
+
+    public main cut;
+
+    @BeforeEach
+    void setup() {
+        cut = new main();
+    }
 
     @Test
     void findMedianSortedArrays1() {
@@ -14,7 +22,7 @@ class mainTest {
         int[] nums1 = {1, 3};
         int[] nums2 = {2};
 
-        assertEquals(2.00000d, main.findMedianSortedArrays(nums1, nums2));
+        assertEquals(2.00000d, cut.findMedianSortedArrays(nums1, nums2));
     }
 
     @Test
@@ -25,7 +33,7 @@ class mainTest {
         int[] nums1 = {1, 2};
         int[] nums2 = {3, 4};
 
-        assertEquals(2.50000d, main.findMedianSortedArrays(nums1, nums2));
+        assertEquals(2.50000d, cut.findMedianSortedArrays(nums1, nums2));
     }
 
     @Test
@@ -35,7 +43,7 @@ class mainTest {
         int[] nums1 = {0, 0};
         int[] nums2 = {0, 0};
 
-        assertEquals(0.00000d, main.findMedianSortedArrays(nums1, nums2));
+        assertEquals(0.00000d, cut.findMedianSortedArrays(nums1, nums2));
     }
 
     @Test
@@ -45,7 +53,7 @@ class mainTest {
         int[] nums1 = {};
         int[] nums2 = {1};
 
-        assertEquals(1.00000d, main.findMedianSortedArrays(nums1, nums2));
+        assertEquals(1.00000d, cut.findMedianSortedArrays(nums1, nums2));
     }
 
     @Test
@@ -55,6 +63,6 @@ class mainTest {
         int[] nums1 = {2};
         int[] nums2 = {};
 
-        assertEquals(2.00000d, main.findMedianSortedArrays(nums1, nums2));
+        assertEquals(2.00000d, cut.findMedianSortedArrays(nums1, nums2));
     }
 }

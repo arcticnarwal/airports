@@ -1,10 +1,18 @@
 package addTwoNumbers;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class mainTest {
+
+    public main cut;
+
+    @BeforeEach
+    void setup() {
+        cut = new main();
+    }
 
     @Test
     void addTwoNumbers1() {
@@ -15,7 +23,7 @@ class mainTest {
         listNode l2 = new listNode(5, new listNode(6, new listNode(4)));
         listNode e = new listNode(7, new listNode(0, new listNode(8)));
 
-        assertEquals(e, main.addTwoNumbers(l1, l2));
+        assertEquals(e, cut.addTwoNumbers(l1, l2));
     }
 
     @Test
@@ -26,7 +34,7 @@ class mainTest {
         listNode l2 = new listNode(0);
         listNode e = new listNode(0);
 
-        assertEquals(e, main.addTwoNumbers(l1, l2));
+        assertEquals(e, cut.addTwoNumbers(l1, l2));
     }
 
     @Test
@@ -37,6 +45,6 @@ class mainTest {
         listNode l2 = new listNode(9, new listNode(9, new listNode(9, new listNode(9))));
         listNode e = new listNode(8, new listNode(9, new listNode(9, new listNode(9, new listNode(0, new listNode(0, new listNode(0, new listNode(1))))))));
 
-        assertEquals(e, main.addTwoNumbers(l1, l2));
+        assertEquals(e, cut.addTwoNumbers(l1, l2));
     }
 }
